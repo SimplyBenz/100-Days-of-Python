@@ -7,6 +7,7 @@ List1.append(4)
 
 print(List2)
 print(List1)
+print(" ")
 
 # In Python, when you assign one list to another (e.g., List2 = List1), both variables point to the same list object in memory. As a result, modifying one (e.g., appending an element) affects the other. This is due to Python's reference assignment behavior for mutable objects like lists.
 
@@ -19,6 +20,7 @@ List1.append(4)
 
 print(List1)  # Output: [1, 2, 3, 4]
 print(List2)  # Output: [1, 2, 3]
+print(" ")
 
 # 2. Use the copy() Method
 
@@ -28,6 +30,7 @@ List1.append(4)
 
 print(List1)  # Output: [1, 2, 3, 4]
 print(List2)  # Output: [1, 2, 3]
+print(" ")
 
 # 3. Use the list() Constructor
 
@@ -37,9 +40,9 @@ List1.append(4)
 
 print(List1)  # Output: [1, 2, 3, 4]
 print(List2)  # Output: [1, 2, 3]
+print(" ")
 
 # 4. Use deepcopy() for Nested Lists
-
 # If the list contains nested lists (or other mutable objects), a shallow copy (methods above) will not suffice. Use the copy.deepcopy() method for a complete independent copy.
 
 import copy
