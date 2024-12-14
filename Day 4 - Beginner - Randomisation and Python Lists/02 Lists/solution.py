@@ -2,8 +2,8 @@ states_of_america = ["Delaware", "Pennsylvania", "New Jersey", "Georgia", "Conne
 
 states_of_america[1] = "Pencilvania"
 
-states_of_america.append("Angelaland")
+states_of_america.append("Benz Jersey")
 
-states_of_america.extend(["Angelaland", "Jack Bauer Land"])
+states_of_america.extend(["Benz Jersey", "Jack Bauer Land"])
 
 print(states_of_america)
