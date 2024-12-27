@@ -56,7 +56,7 @@ def game_start(game_status):
     print(dealer_hand)
 
     for item in dealer_hand:
-        if len(dealer_hand) <= 4 and calc_score(dealer_hand) <= 16: #if score in dealer hand <= 16 and not more than 4 cards dealer will draw card.
+        if len(dealer_hand) <= 4 and calc_score(dealer_hand) <= 16: #aif score in dealer hand <= 16 and not more than 4 cards dealer will draw card.
             dealer_hand.append(draw_card())
         else:
             break
@@ -75,7 +75,7 @@ def game_start(game_status):
 
     print(player_hand)
     print(calc_score(player_hand))
-    
+
     print(dealer_hand)
     print(calc_score(dealer_hand))
 
