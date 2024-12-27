@@ -6,6 +6,7 @@ import art
 cards = [11,2,3,4,5,6,7,8,9,10,10,10,10]
 
 def calc_score(card_in_hand):
+
     score = 0
     for item in card_in_hand:
         if item == 11:
@@ -34,6 +35,8 @@ def compare(dealer_score,player_score):
         print("Dealer WIN")
     elif dealer_score > 21 and player_score <= 21 :
         print("Player WIN")
+    elif dealer_score > 21 and player_score > 21 :
+        print("BUST")
 
 def game_start(game_status):
     dealer_hand = []
@@ -69,8 +72,12 @@ def game_start(game_status):
             print(f"You got {player_hand[-1]} now you have {player_hand}")
 
     print(compare(dealer_score=calc_score(dealer_hand), player_score=calc_score(player_hand)))
+
     print(player_hand)
+    print(calc_score(player_hand))
+    
     print(dealer_hand)
+    print(calc_score(dealer_hand))
 
     game_status = input("Do you want to play a game of Blackjack? Type 'y' or 'n':").lower()
     game_start(game_status)
