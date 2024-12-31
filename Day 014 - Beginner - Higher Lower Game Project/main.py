@@ -56,6 +56,6 @@ def game_on(FirstChoice, SecondChoice):
     print(FirstChoice)
     print(SecondChoice)
 
-    choose_component(FirstChoice,SecondChoice)
+    choose_component(FirstChoice,SecondChoice) #have a bug here about returning to the function, will check later
 
 choose_component(FirstChoice = Opponent01,SecondChoice = Opponent02)
