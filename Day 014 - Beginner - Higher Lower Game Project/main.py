@@ -16,46 +16,46 @@ def choose_component(FirstChoice,SecondChoice):
 
     for i in Selected_Already:
         if FirstChoice == i or SecondChoice == i:
-            choose_component()
+            choose_component(FirstChoice,SecondChoice)
 
     Selected_Already.append(FirstChoice)
     Selected_Already.append(SecondChoice)
 
-    game_on(FirstChoice, SecondChoice)
+    game_on(A=FirstChoice, B=SecondChoice)
 
-def game_on(FirstChoice, SecondChoice):
+def game_on(A,B):
     print(logo)
-    print(f"Name: {data[FirstChoice]['name']}")
-    print(f"Follower Count: {data[FirstChoice]['follower_count']}")
-    print(f"Description: {data[FirstChoice]['description']}")
-    print(f"Country: {data[FirstChoice]['country']}")
+    print(f"Name: {data[A]['name']}")
+    print(f"Follower Count: {data[A]['follower_count']}")
+    print(f"Description: {data[A]['description']}")
+    print(f"Country: {data[A]['country']}")
     print(vs)
-    print(f"Name: {data[SecondChoice]['name']}")
-    print(f"Follower Count: {data[SecondChoice]['follower_count']}")
-    print(f"Description: {data[SecondChoice]['description']}")
-    print(f"Country: {data[SecondChoice]['country']}")
+    print(f"Name: {data[B]['name']}")
+    print(f"Follower Count: {data[B]['follower_count']}")
+    print(f"Description: {data[B]['description']}")
+    print(f"Country: {data[B]['country']}")
 
     print(len(Selected_Already))
     player_choice = input("Who has more followers? Type 'A' or 'B': ").upper()
     if player_choice == 'A':
 
-        if data[FirstChoice]['follower_count'] > data[SecondChoice]['follower_count']:
+        if data[A]['follower_count'] > data[B]['follower_count']:
             print("You are right!")
-            FirstChoice = SecondChoice
+            A = B
         else:
             print("You are wrong!")
             return
     elif player_choice == 'B':
-        if data[FirstChoice]['follower_count'] < data[SecondChoice]['follower_count']:
+        if data[A]['follower_count'] < data[B]['follower_count']:
             print("You are right!")
-            FirstChoice = SecondChoice
+            A = B
         else:
             print("You are wrong!")
             return
 
-    print(FirstChoice)
-    print(SecondChoice)
+    print(A)
+    print(B)
 
-    choose_component(FirstChoice,SecondChoice) #have a bug here about returning to the function, will check later
+    choose_component(A,B) #FIXME: Fix the bug that the function is not returning to the function after the player has made a choice
 
 choose_component(FirstChoice = Opponent01,SecondChoice = Opponent02)
