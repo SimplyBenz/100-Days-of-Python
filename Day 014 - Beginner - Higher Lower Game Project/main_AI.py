@@ -22,12 +22,12 @@ def get_random_opponent(exclude=[]):
 def game_on(A, B):
     print(logo)
     print(f"Name: {data[A]['name']}")
-    print(f"Follower Count: {data[A]['follower_count']}")
+    # print(f"Follower Count: {data[A]['follower_count']}")
     print(f"Description: {data[A]['description']}")
     print(f"Country: {data[A]['country']}")
     print(vs)
     print(f"Name: {data[B]['name']}")
-    print(f"Follower Count: {data[B]['follower_count']}")
+    # print(f"Follower Count: {data[B]['follower_count']}")
     print(f"Description: {data[B]['description']}")
     print(f"Country: {data[B]['country']}")
 
