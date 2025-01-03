@@ -9,7 +9,7 @@ resources = {
 
 coffee_type = ""
 
-#TODO Prompt user by asking “What would you like? (espresso/latte/cappuccino):"
+#TODO Prompt user by asking “What would you like? (espresso/latte/cappuccino):" test
 def start_order():
     
     global coffee_type
